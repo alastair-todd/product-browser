@@ -2,37 +2,41 @@
 A simple product browser
 
 # Pre-requisites
+
 # npm
 install node package manager (a.k.a npm, narcoleptic plinky manatees)
-# Browserify
+
+## Browserify
 npm install -g browserify
 
-# Install project dependencies
+## Install project dependencies
 npm install
 
-# ESLinting
+# Development
+
+## ESLinting
 npm run eslint
 
-# Watch Debug (Browserify with source maps)
-npm run debug
+## Watch Debug (Browserify with source maps)
+npm run watch:js:debug
 
-# Build and package
+## Compile js
 npm run build-js
 
-# SASS
+## Compile SASS
 npm run build-sass
 
-# Full build (js + sass)
+## Full build (js + sass)
 npm run build
 
-# Run specs
+## Run specs
 npm run specs
 
-# Run
+## Start web server 
 npm run start
 (visit http://127.0.0.1:8000)
 
-# Debug (Run, Watch, Source Maps)
+## Debug (start web server; watch and build javascript + sass; include browserify source maps)
 npm run debug
 (visit http://127.0.0.1:8000)
 
