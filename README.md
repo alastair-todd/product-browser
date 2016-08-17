@@ -3,8 +3,8 @@ A simple product browser
 
 # Pre-requisites
 
-# npm
-install node package manager (a.k.a npm, narcoleptic plinky manatees)
+## npm
+install [node package manager](https://www.npmjs.com/)] (a.k.a npm, narcoleptic plinky manatees)
 
 ## Browserify
 npm install -g browserify
