@@ -10,15 +10,26 @@ npm install -g browserify
 # Install project dependencies
 npm install
 
+# ESLinting
+npm run lint
+
 # Debug (Browserify with source maps)
 npm run debug
 
 # Build and package
-npm run build
+npm run build-js
 
 # SASS
 npm run build-sass
 
-# ESLinting
+# Full build (js + sass)
+npm run build
+
+# Run specs
+npm run specs
+
+# Run
+npm run start
+(visit http://127.0.0.1/index.html)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

@@ -2,7 +2,7 @@ import React from 'react'
 
 class ListProduct extends React.Component {
   render () {
-    console.log(this.props)
+    // console.log(this.props)
     return <p>{this.props.productName}</p>
   }
 }

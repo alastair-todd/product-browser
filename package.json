@@ -4,11 +4,15 @@
   "description": "A simple product browser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "browserify -t [ babelify --presets [ es2015 react ] ] src/index.js --debug -o build/app.js -v",
-    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] src/index.js -o build/app.js -v",
-    "build": "browserify -t [ babelify --presets [ react ] ] src/index.js -o build/app.js",
-    "build-sass": "node-sass assets/sass/app.scss assets/css/app.css"
+    "specs": "karma start karma.conf.js",
+    "eslint": "eslint src",
+    "watch:js:debug": "watchify -t [ babelify --presets [ es2015 react ] ] src/index.js --debug -o build/app.js -v",
+    "watch:js": "watchify -t [ babelify --presets [ es2015 react ] ] src/index.js -o build/app.js -v",
+    "watch:sass": "node-sass assets/sass/app.scss assets/css/app.css -w",
+    "debug": "parallelshell \"npm run watch:sass\" \"npm run watch:js:debug\" ",
+    "build:js": "browserify -t [ babelify --presets [ es2015 react ] ] src/index.js -o build/app.js -v",
+    "build:sass": "node-sass assets/sass/app.scss assets/css/app.css",
+    "build": "npm run build:sass && npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +21,6 @@
   "author": "Alastair Todd",
   "license": "ISC",
   "dependencies": {
-    "babel-preset-react": "^6.11.1",
-    "babelify": "^7.3.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },
@@ -32,6 +34,11 @@
     "eslint-config-standard-react": "^3.0.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "parallelshell": "^2.0.0",
     "standard": "^7.1.2",
     "watchify": "^3.7.0"
   }
