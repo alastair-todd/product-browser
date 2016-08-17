@@ -1,0 +1,19 @@
+{
+  "name": "product-gallery",
+  "version": "1.0.0",
+  "description": "\"A simple product browser\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/alastair-todd/product-browser.git\""
+  },
+  "author": "\"Alastair Todd\"",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  }
+}
