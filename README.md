@@ -11,9 +11,9 @@ npm install -g browserify
 npm install
 
 # ESLinting
-npm run lint
+npm run eslint
 
-# Debug (Browserify with source maps)
+# Watch Debug (Browserify with source maps)
 npm run debug
 
 # Build and package
@@ -30,6 +30,10 @@ npm run specs
 
 # Run
 npm run start
-(visit http://127.0.0.1/index.html)
+(visit http://127.0.0.1:8000)
+
+# Debug (Run, Watch, Source Maps)
+npm run debug
+(visit http://127.0.0.1:8000)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

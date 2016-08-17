@@ -9,10 +9,11 @@
     "watch:js:debug": "watchify -t [ babelify --presets [ es2015 react ] ] src/index.js --debug -o build/app.js -v",
     "watch:js": "watchify -t [ babelify --presets [ es2015 react ] ] src/index.js -o build/app.js -v",
     "watch:sass": "node-sass assets/sass/app.scss assets/css/app.css -w",
-    "debug": "parallelshell \"npm run watch:sass\" \"npm run watch:js:debug\" ",
     "build:js": "browserify -t [ babelify --presets [ es2015 react ] ] src/index.js -o build/app.js -v",
     "build:sass": "node-sass assets/sass/app.scss assets/css/app.css",
-    "build": "npm run build:sass && npm run build:js"
+    "build": "npm run build:sass && npm run build:js",
+    "start": "ws --spa index.html",
+    "debug": "parallelshell \"npm run watch:sass\" \"npm run watch:js:debug\" \"npm run start\""
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
+    "local-web-server": "^1.2.6",
     "parallelshell": "^2.0.0",
     "standard": "^7.1.2",
     "watchify": "^3.7.0"
