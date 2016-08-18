@@ -2,21 +2,19 @@ import React from 'react'
 import ListProduct from './ListProduct'
 
 class ProductBrowser extends React.Component {
-  constructor () {
-    super()
-    let newProduct = <ListProduct key="1" productName="Product1" />
-    this.state = {
-      products: [newProduct]
-    }
-  }
+
   render () {
     return (
       <ul>
-        {this.state.products && this.state.products.map(function (result) {
-          return result
-        })}
+        { this.props.products.map(this.renderProduct) }
       </ul>
     )
   }
+  renderProduct (product) {
+    return <ListProduct key={product.id} product={product} />
+  }
+}
+ProductBrowser.propTypes = {
+  products: React.PropTypes.array
 }
 export default ProductBrowser

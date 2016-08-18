@@ -1,15 +1,22 @@
 import React from 'react'
+import ProductImageContainer from './ProductImageContainer'
 
 class ListProduct extends React.Component {
   render () {
-    // console.log(this.props)
-    return <p>{this.props.productName}</p>
+    return (
+      <div>
+        <h2>{this.props.product.name}</h2>
+        <ProductImageContainer product={this.props.product} />
+        <p>{this.props.product.description}</p>
+        <button onClick={this.viewMore}>View More</button>
+      </div>
+      )
+  }
+  viewMore () {
+    console.log('go product')
   }
 }
 ListProduct.propTypes = {
-  productName: React.PropTypes.string.isRequired
-}
-ListProduct.defaultProps = {
-
+  product: React.PropTypes.object.isRequired
 }
 export default ListProduct

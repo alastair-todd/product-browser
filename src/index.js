@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ProductBrowser from './ProductBrowser'
+import ProductBrowserContainer from './ProductBrowserContainer'
 
 ReactDOM.render(
-  <ProductBrowser />,
+  <ProductBrowserContainer />,
   document.getElementById('app')
 )
