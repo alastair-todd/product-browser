@@ -15,15 +15,14 @@ class ProductEditContainer extends React.Component {
       dataType: 'json',
       success: function (product) {
         this.setState({product: product})
-        this.forceUpdate()
       }.bind(this)
     })
   }
   render () {
-    return <ProductEdit
+    return this.state.product ? <ProductEdit
       product={this.state.product}
       onSaveProduct={this.onSaveProduct}
-    />
+    /> : null
   }
   onSaveProduct (product) {
     console.log(product)

@@ -28,8 +28,7 @@ class ProductEdit extends React.Component {
     console.log(self.state)
   }
   updateName (e) {
-    console.log(this)
-    console.log(e)
+    this.setState({name: e.target.value})
   }
   render () {
     let product = this.props.product
