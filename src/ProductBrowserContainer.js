@@ -11,7 +11,7 @@ class ProductBrowserContainer extends React.Component {
   }
   componentDidMount () {
     $.ajax({
-      url: Environment.API_URL + '/v1/products ',
+      url: Environment.getUrl('/v1/products'),
       dataType: 'json',
       success: function (products) {
         // for (let [index, product] of products.entries()) {

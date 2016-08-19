@@ -12,9 +12,11 @@ class ListProduct extends React.Component {
         <h2>{product.name}</h2>
         <ProductImageContainer product={product} />
         <p>{product.description}</p>
-        <LinkContainer to={{ pathname: `/product/${product.id}` }}>
-          <Button>View More</Button>
-        </LinkContainer>
+        <div>
+          <LinkContainer to={{ pathname: `/product/${product.id}` }}>
+            <Button>View More</Button>
+          </LinkContainer>
+        </div>
       </div>
       )
   }

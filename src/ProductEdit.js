@@ -1,13 +1,16 @@
 // ProductEdit.js
 import React from 'react'
-import {Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'
+import {Row, Col, Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
+// import Environment from './Environment'
 
 class ProductEdit extends React.Component {
 
   constructor (props) {
     super(props)
     this.updateName = this.updateName.bind(this)
+    this.updateDescription = this.updateDescription.bind(this)
+    this.saveForm = this.saveForm.bind(this)
     let product = props.product || {}
     this.state = {
       name: product.name,
@@ -17,23 +20,21 @@ class ProductEdit extends React.Component {
   getValidationState () {
     return 'success'
   }
-  handleChange (e) {
-  }
   saveForm (e) {
-    console.log('saving')
-    var self
     e.preventDefault()
-    self = this
-
-    console.log(self.state)
+    this.props.onSaveProduct(this.props.product)
   }
   updateName (e) {
     this.setState({name: e.target.value})
+    this.props.product.name = e.target.value
+  }
+  updateDescription (e) {
+    this.setState({description: e.target.value})
+    this.props.product.description = e.target.value
   }
   render () {
     let product = this.props.product
     let state = this.state
-    let me = this
     if (!state.name) return <div />
     return (
       <Row>
@@ -48,19 +49,19 @@ class ProductEdit extends React.Component {
                 onChange={this.updateName}
               />
             </FormGroup>
-            {/* <FormGroup controlId="description">
+            <FormGroup controlId="description">
               <ControlLabel>Product Name</ControlLabel>
               <FormControl
                 type="text"
                 value={state.description}
-                onChange={this.updateField.bind(this, '')}
+                onChange={this.updateDescription}
               />
-            </FormGroup> */}
+            </FormGroup>
             <div>
               <LinkContainer to={{ pathname: `/product/${product.id}` }}>
                 <Button>Cancel</Button>
               </LinkContainer>
-              <Button type="submit">
+              <Button type="button" onClick={this.saveForm}>
                 Save
               </Button>
             </div>

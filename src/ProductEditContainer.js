@@ -8,10 +8,11 @@ class ProductEditContainer extends React.Component {
   constructor () {
     super()
     this.state = { product: null }
+    this.onSaveProduct.bind(this)
   }
   componentDidMount () {
     $.ajax({
-      url: Environment.API_URL + '/v1/products/' + this.props.params.id,
+      url: Environment.getUrl('/v1/products/' + this.props.params.id),
       dataType: 'json',
       success: function (product) {
         this.setState({product: product})
@@ -26,6 +27,16 @@ class ProductEditContainer extends React.Component {
   }
   onSaveProduct (product) {
     console.log(product)
+    $.ajax({
+      url: Environment.getUrl('/v1/products/' + product.id),
+      dataType: 'json',
+      //contentType: 'application/json',
+      method: 'PUT',
+      data: {product: product},
+      success: function (product) {
+        console.log('saved')
+      }
+    })
   }
 }
 ProductEditContainer.propTypes = {

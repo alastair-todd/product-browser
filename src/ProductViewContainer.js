@@ -11,7 +11,7 @@ class ProductViewContainer extends React.Component {
   }
   componentDidMount () {
     $.ajax({
-      url: Environment.API_URL + '/v1/products/' + this.props.params.id,
+      url: Environment.getUrl('/v1/products/' + this.props.params.id),
       dataType: 'json',
       success: function (product) {
         this.setState({product: product})
