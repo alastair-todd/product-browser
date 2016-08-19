@@ -4,7 +4,7 @@ import ProductImageContainer from './ProductImageContainer'
 class ListProduct extends React.Component {
   render () {
     return (
-      <div>
+      <div className="product-wrapper">
         <h2>{this.props.product.name}</h2>
         <ProductImageContainer product={this.props.product} />
         <p>{this.props.product.description}</p>

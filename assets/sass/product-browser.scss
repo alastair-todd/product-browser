@@ -1,0 +1,11 @@
+.product-wrapper {
+  height: 550px;
+  img {
+    max-height: 380px;
+    overflow: hidden; 
+    width: 100%;
+  }
+  p {
+    margin-top: 20px;
+  }
+}

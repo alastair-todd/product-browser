@@ -1,3 +1,36 @@
+nav.navbar .nav-header .navbar-brand {
+  padding: 6px 10px; }
+  nav.navbar .nav-header .navbar-brand span:first-child {
+    color: #CC5500; }
+  nav.navbar .nav-header .navbar-brand span:last-child {
+    display: inline;
+    margin-left: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    position: relative;
+    top: -6px;
+    color: #fff; }
+
+nav.navbar .about {
+  padding-right: 20px; }
+
+@media (min-width: 768px) {
+  nav.navbar .navbar-right {
+    margin-right: 0; } }
+
+.product-wrapper {
+  height: 550px; }
+  .product-wrapper img {
+    max-height: 380px;
+    overflow: hidden;
+    width: 100%; }
+  .product-wrapper p {
+    margin-top: 20px; }
+
 body {
   font-family: 'Ropa Sans',sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 1.6em; }
+
+h1, h2 {
+  text-transform: uppercase; }

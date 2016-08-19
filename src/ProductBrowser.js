@@ -1,17 +1,22 @@
 import React from 'react'
 import ListProduct from './ListProduct'
+import {Grid, Row, Col} from 'react-bootstrap'
 
 class ProductBrowser extends React.Component {
 
   render () {
     return (
-      <ul>
-        { this.props.products.map(this.renderProduct) }
-      </ul>
+      <Row>
+      { this.props.products.map(this.renderProduct) }
+      </Row>
     )
   }
   renderProduct (product) {
-    return <ListProduct key={product.id} product={product} />
+    return (
+      <Col xs={12} sm={12} md={6} lg={4} key={product.id}>
+        <ListProduct product={product} />
+      </Col>
+    )
   }
 }
 ProductBrowser.propTypes = {

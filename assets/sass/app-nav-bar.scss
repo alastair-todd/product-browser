@@ -1,0 +1,28 @@
+@import 'colours';
+
+nav.navbar {
+  .nav-header { 
+    .navbar-brand { 
+      padding: 6px 10px;
+    
+      span:first-child { color: #CC5500; } 
+      span:last-child {
+        display: inline; 
+        margin-left: 10px; 
+        font-size: 1.2em; 
+        text-transform: uppercase;
+        position: relative;
+        top: -6px;
+        color: #fff;
+      }
+    }
+  }
+  .about {
+    padding-right: 20px;
+  }
+  @media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 0; 
+    }
+  }
+}

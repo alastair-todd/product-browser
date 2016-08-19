@@ -1,20 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import {Grid, Row, Col} from 'react-bootstrap'
+import AppNavBar from './Layout/AppNavBar'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import ProductBrowserContainer from './ProductBrowserContainer'
 import About from './About'
 
 class App extends React.Component {
   render () {
     return (
-      <div>
-        <h1>App</h1>
-        <ul>
-          <li><Link to="/">Browse Products</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-        {this.props.children}
-      </div>
+      <Grid>
+        <Row>
+          <Col xs={12}>
+            <AppNavBar />
+            {this.props.children}
+          </Col>
+        </Row>
+      </Grid>
     )
   }
 }
@@ -29,4 +31,4 @@ ReactDOM.render((
       <Route path="about" component={About} />
     </Route>
   </Router>
-), document.body)
+), document.getElementById('app'))

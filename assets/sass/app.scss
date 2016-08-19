@@ -1,3 +1,11 @@
+@import 'app-nav-bar';
+@import 'product-browser';
+
 body {
-	font-family: 'Ropa Sans',sans-serif; font-weight: normal;
+	font-family: 'Ropa Sans',sans-serif; 
+  font-weight: normal;
+  font-size: 1.6em;
+} 
+h1, h2 {
+  text-transform: uppercase;
 }
