@@ -1,3 +1,4 @@
+// Layout/AppNavBar.js
 import React from 'react'
 import {Navbar, Nav, NavItem} from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'

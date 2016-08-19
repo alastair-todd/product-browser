@@ -1,3 +1,4 @@
+// ProductImage.js
 import React from 'react'
 
 class ProductImage extends React.Component {
