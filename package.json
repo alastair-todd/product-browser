@@ -2,9 +2,13 @@
   "name": "product-gallery",
   "version": "1.0.0",
   "description": "A simple product browser",
+  "author": "Alastair Todd",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "specs": "karma start karma.conf.js",
+    "test": "jest",
+    "prepare-tests": "jest -u",
     "eslint": "eslint src",
     "watch-js-debug": "watchify -t [ babelify ] src/index.js --debug -o build/app.js -v",
     "watch-js": "watchify -t [ babelify ] src/index.js -o build/app.js -v",
@@ -13,7 +17,7 @@
     "build-sass": "node-sass --include-path assets/sass assets/sass/app.scss assets/css/app.css",
     "build": "npm run build-sass && npm run build-js",
     "start": "ws --spa index.html",
-    "debug": "parallelshell \"npm run proxy-alt\" \"npm run watch-sass\" \"npm run watch-js-debug\" \"npm run start\" ",
+    "debug": "parallelshell \"npm run watch-sass\" \"npm run watch-js-debug\" \"npm run start\" ", 
     "proxy": "corsproxy",
     "proxy-alt": "cors-proxy"
   },
@@ -21,8 +25,9 @@
     "type": "git",
     "url": "https://github.com/alastair-todd/product-browser.git"
   },
-  "author": "Alastair Todd",
-  "license": "ISC",
+  "jest": {
+    "automock": false
+  },
   "dependencies": {
     "jquery": "^3.1.0",
     "react": "^15.3.0",
@@ -53,7 +58,7 @@
     "local-web-server": "^1.2.6",
     "node-sass": "^3.8.0",
     "parallelshell": "^2.0.0",
-    "react-test-renderer": "^15.3.0",
+    "react-test-renderer": "^15.3.1",
     "standard": "^7.1.2",
     "watchify": "^3.7.0"
   }

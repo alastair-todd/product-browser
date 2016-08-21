@@ -21,7 +21,8 @@ class About extends React.Component {
         <h2>Nice to haves but didn't make the cut</h2>
         <ul>
           <li>Redux - looks a winner for handling state and data</li>
-          <li>form validation</li>
+          <li>Form validation</li>
+          <li>Error handling (API calls) + 404s</li>
         </ul>
         <h2>Dedication</h2>
         <i className="fa fa-heart-o" />&nbsp;To David, my pet bear...<br /><br />

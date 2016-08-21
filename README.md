@@ -1,6 +1,8 @@
 # product-browser
 A simple product browser
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 # Pre-requisites
 
 ## npm
@@ -18,7 +20,7 @@ npm install
 npm run eslint
 
 ## Watch Debug (Browserify with source maps)
-npm run watch:js:debug
+npm run watch-js-debug
 
 ## Compile js
 npm run build-js
@@ -29,8 +31,8 @@ npm run build-sass
 ## Full build (js + sass)
 npm run build
 
-## Run specs
-npm run specs
+## Run jest tests
+npm run tests
 
 ## Start web server 
 npm run start
@@ -40,4 +42,4 @@ npm run start
 npm run debug
 (visit http://127.0.0.1|0.0.0.0:8000)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+

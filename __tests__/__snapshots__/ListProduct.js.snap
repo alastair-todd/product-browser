@@ -1,0 +1,23 @@
+exports[`ListProduct is rendered 1`] = `
+<div
+  className="product-wrapper">
+  <h2>
+    test product
+  </h2>
+  <div
+    className="no-image" />
+  <p>
+    test product description
+  </p>
+  <div>
+    <button
+      action="push"
+      className="btn btn-default"
+      disabled={false}
+      onClick={[Function anonymous]}
+      type="button">
+      View More
+    </button>
+  </div>
+</div>
+`;

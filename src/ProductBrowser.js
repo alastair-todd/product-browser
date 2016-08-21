@@ -1,6 +1,6 @@
 import React from 'react'
 import ListProduct from './ListProduct'
-import {Grid, Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 
 class ProductBrowser extends React.Component {
 

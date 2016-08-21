@@ -2,7 +2,7 @@ var _Environments = {
   production: { API_URL: '', GOOGLE_SEARCH_API_KEY: '', GOOGLE_SEARCH_ENGINE_KEY: '', FLICKR_SEARCH_API_KEY: '' },
   staging: { API_URL: '', GOOGLE_SEARCH_API_KEY: '', GOOGLE_SEARCH_ENGINE_KEY: '', FLICKR_SEARCH_API_KEY: '' },
   development: {
-    API_URL: 'http://localhost:3001/',
+    API_URL: 'http://134.213.113.137:9000',
     GOOGLE_SEARCH_API_KEY: 'AIzaSyBQQc_cjX20B6ifevnUUglZWokdR402-Yw',
     GOOGLE_SEARCH_ENGINE_KEY: '007281745744775710442:fvaffsm1ywu',
     FLICKR_SEARCH_API_KEY: 'e0b3b16b6a4729284dc22c2db7c52cf3'
@@ -21,8 +21,10 @@ function getEnvironment () {
   return _Environments[platform]
 }
 
-var Environment = getEnvironment()
-Environment.getUrl = function(path) {
-  return this.API_URL + '?url=http://134.213.113.137:9000' + path // encodeURIComponent(path)
+// var headers = {'Access-Control-Request-Headers': '*'}
+let Environment = getEnvironment()
+Environment.getUrl = function (path) {
+  return this.API_URL + path
+  // return this.API_URL + '?url=' + encodeURIComponent('http://134.213.113.137:9000' + path) //+ '&headers=' + encodeURIComponent(JSON.stringify(headers))
 }
 module.exports = Environment

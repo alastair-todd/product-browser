@@ -29,12 +29,15 @@ class ProductEditContainer extends React.Component {
     console.log(product)
     $.ajax({
       url: Environment.getUrl('/v1/products/' + product.id),
-      dataType: 'json',
-      //contentType: 'application/json',
+      // dataType: 'json',
+      // contentType: 'application/json',
       method: 'PUT',
-      data: {product: product},
+      data: JSON.stringify(product),
       success: function (product) {
         console.log('saved')
+      },
+      error: function () {
+        window.alert('API PUT failed')
       }
     })
   }

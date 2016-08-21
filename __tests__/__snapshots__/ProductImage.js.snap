@@ -1,0 +1,5 @@
+exports[`ProductImage is rendered 1`] = `
+<img
+  className="img-responsive"
+  src="assets/img/bear2.png" />
+`;

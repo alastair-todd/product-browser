@@ -6,5 +6,9 @@ module.exports = {
     "plugins": [
         "standard",
         "promise"
-    ]
+    ],
+    "env": {
+      "jasmine": true,
+      "jest": true
+    }
 };
